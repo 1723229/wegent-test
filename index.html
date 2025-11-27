@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>俄罗斯方块</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>俄罗斯方块</h1>
+            <div class="game-info">
+                <div class="score">
+                    <span>得分: </span>
+                    <span id="score">0</span>
+                </div>
+                <div class="level">
+                    <span>等级: </span>
+                    <span id="level">1</span>
+                </div>
+                <div class="lines">
+                    <span>清除行数: </span>
+                    <span id="lines">0</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-main">
+            <div class="game-board">
+                <canvas id="game-canvas" width="300" height="600"></canvas>
+            </div>
+
+            <div class="game-sidebar">
+                <div class="next-piece">
+                    <h3>下一个</h3>
+                    <canvas id="next-canvas" width="120" height="120"></canvas>
+                </div>
+
+                <div class="controls">
+                    <h3>操作说明</h3>
+                    <div class="control-item">
+                        <span class="key">←→</span>
+                        <span class="desc">移动</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↓</span>
+                        <span class="desc">快速下降</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">↑</span>
+                        <span class="desc">旋转</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">空格</span>
+                        <span class="desc">直接落下</span>
+                    </div>
+                    <div class="control-item">
+                        <span class="key">P</span>
+                        <span class="desc">暂停</span>
+                    </div>
+                </div>
+
+                <div class="game-buttons">
+                    <button id="start-btn" class="btn">开始游戏</button>
+                    <button id="pause-btn" class="btn">暂停</button>
+                    <button id="reset-btn" class="btn">重新开始</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-over" class="game-over hidden">
+        <div class="game-over-content">
+            <h2>游戏结束</h2>
+            <p>最终得分: <span id="final-score">0</span></p>
+            <button id="restart-btn" class="btn">重新开始</button>
+        </div>
+    </div>
+
+    <script src="tetris.js"></script>
+</body>
+</html>
