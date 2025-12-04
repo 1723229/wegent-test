@@ -1,2 +1,0 @@
-# wegent-test
-wegent-test
